@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const teamsApi = createApi({
     reducerPath: "teamsApi",
     baseQuery: fetchBaseQuery({
-        baseUrl: "http://api.football-data.org/v2/",
+        baseUrl: "https://api.football-data.org/v2/",
         prepareHeaders: (headers) => {
             headers.set(
                 "X-Auth-Token",
