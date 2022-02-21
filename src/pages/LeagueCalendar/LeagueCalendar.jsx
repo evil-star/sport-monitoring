@@ -1,14 +1,9 @@
-import {
-    Breadcrumbs,
-    Container,
-    Link,
-    Skeleton,
-    Typography,
-} from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import React from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useGetLeagueMatchesQuery } from "../../api/leaguesApi";
 import MatchesDataContainer from "../../common/containers/MatchesDataContainer";
+import Breadcrumbs from "../../common/ui/Breadcrumbs/Breadcrumbs";
 
 const LeagueCalendar = () => {
     const { leagueId } = useParams();
@@ -16,27 +11,18 @@ const LeagueCalendar = () => {
         id: leagueId,
     });
 
+    const crumbs = [
+        { name: "Лиги", href: "/leagues" },
+        {
+            name: error ? "" : data?.competition.name,
+            href: `/leagues/${leagueId}/league-calendar`,
+            isLoading,
+        },
+    ];
+
     return (
         <Container maxWidth="lg">
-            <Breadcrumbs aria-label="breadcrumb" sx={{ mb: "30px" }}>
-                <Link
-                    underline="hover"
-                    color="inherit"
-                    component={NavLink}
-                    to="/"
-                >
-                    Лиги
-                </Link>
-                <Typography color="text.primary">
-                    {error ? (
-                        ""
-                    ) : isLoading ? (
-                        <Skeleton sx={{ width: "100px" }} />
-                    ) : (
-                        data?.competition.name
-                    )}
-                </Typography>
-            </Breadcrumbs>
+            <Breadcrumbs crumbs={crumbs} sx={{ mb: "30px" }} />
 
             <Typography variant="h3" component="div" sx={{ mb: "20px" }}>
                 Матчи

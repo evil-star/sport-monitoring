@@ -1,14 +1,9 @@
-import {
-    Breadcrumbs,
-    Container,
-    Link,
-    Skeleton,
-    Typography,
-} from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import React from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useGetTeamQuery } from "../../api/teamsApi";
 import MatchesDataContainer from "../../common/containers/MatchesDataContainer";
+import Breadcrumbs from "../../common/ui/Breadcrumbs/Breadcrumbs";
 
 const TeamCalendar = () => {
     const { teamId } = useParams();
@@ -16,27 +11,18 @@ const TeamCalendar = () => {
         id: teamId,
     });
 
+    const crumbs = [
+        { name: "Команды", href: "/teams" },
+        {
+            name: error ? "" : data?.name,
+            href: `/teams/${teamId}/team-calendar`,
+            isLoading,
+        },
+    ];
+
     return (
         <Container maxWidth="lg">
-            <Breadcrumbs aria-label="breadcrumb" sx={{ mb: "30px" }}>
-                <Link
-                    underline="hover"
-                    color="inherit"
-                    component={NavLink}
-                    to="/teams"
-                >
-                    Команды
-                </Link>
-                <Typography color="text.primary">
-                    {error ? (
-                        ""
-                    ) : isLoading ? (
-                        <Skeleton sx={{ width: "100px" }} />
-                    ) : (
-                        data?.name
-                    )}
-                </Typography>
-            </Breadcrumbs>
+            <Breadcrumbs crumbs={crumbs} sx={{ mb: "30px" }} />
 
             <Typography variant="h3" component="div" sx={{ mb: "20px" }}>
                 Матчи
