@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sport-monitoring/static/css/main.51ec1624.css",
-    "main.js": "/sport-monitoring/static/js/main.3e0f3f7c.js",
+    "main.js": "/sport-monitoring/static/js/main.46ad589a.js",
     "static/js/215.ad6121dd.chunk.js": "/sport-monitoring/static/js/215.ad6121dd.chunk.js",
     "static/js/747.8af3099d.chunk.js": "/sport-monitoring/static/js/747.8af3099d.chunk.js",
     "static/js/644.9c08a9cb.chunk.js": "/sport-monitoring/static/js/644.9c08a9cb.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/249.a1c95eb6.chunk.js": "/sport-monitoring/static/js/249.a1c95eb6.chunk.js",
     "index.html": "/sport-monitoring/index.html",
     "main.51ec1624.css.map": "/sport-monitoring/static/css/main.51ec1624.css.map",
-    "main.3e0f3f7c.js.map": "/sport-monitoring/static/js/main.3e0f3f7c.js.map",
+    "main.46ad589a.js.map": "/sport-monitoring/static/js/main.46ad589a.js.map",
     "215.ad6121dd.chunk.js.map": "/sport-monitoring/static/js/215.ad6121dd.chunk.js.map",
     "747.8af3099d.chunk.js.map": "/sport-monitoring/static/js/747.8af3099d.chunk.js.map",
     "644.9c08a9cb.chunk.js.map": "/sport-monitoring/static/js/644.9c08a9cb.chunk.js.map",
@@ -20,6 +20,6 @@
   },
   "entrypoints": [
     "static/css/main.51ec1624.css",
-    "static/js/main.3e0f3f7c.js"
+    "static/js/main.46ad589a.js"
   ]
 }
