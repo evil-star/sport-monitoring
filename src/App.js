@@ -19,11 +19,11 @@ const App = () => {
                             exact={exact}
                             key={name}
                             element={
-                                <React.Suspense fallback={<>...</>}>
-                                    <Layout>
+                                <Layout>
+                                    <React.Suspense fallback={<>...</>}>
                                         <Component />
-                                    </Layout>
-                                </React.Suspense>
+                                    </React.Suspense>
+                                </Layout>
                             }
                         />
                     )
