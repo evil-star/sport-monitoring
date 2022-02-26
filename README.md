@@ -7,7 +7,7 @@
 - React
 - Redux
 - Redux toolkit
-- MIU (ui-библиотека)
+- MUI (ui-библиотека)
 
 ## Установка проекта
 
