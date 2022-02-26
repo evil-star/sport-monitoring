@@ -32,8 +32,7 @@
   },
   "browserslist": {
     "production": [
-      "chrome > 20",
-      "opera > 14"
+      "cover 90%"
     ],
     "development": [
       "last 1 chrome version",
