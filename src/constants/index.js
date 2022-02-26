@@ -1,4 +1,4 @@
 export const AppBarLinks = [
-    { name: "Лиги", to: "/leagues" },
-    { name: "Команды", to: "/teams" },
+  {name: "Лиги", to: "/leagues"},
+  {name: "Команды", to: "/teams"},
 ];
