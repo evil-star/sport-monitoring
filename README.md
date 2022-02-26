@@ -9,6 +9,12 @@
 - Redux toolkit
 - MIU (ui-библиотека)
 
+## Установка проекта
+
+1. Склонируйте репозиторий командой `git clone https://github.com/evil-star/sport-monitoring.git`
+2. Установите зависимости командой `npm i`
+3. Для корректного взаимодействия с API [football-data](https://www.football-data.org/) вы можете создать переменную окружения `REACT_APP_FOOTBALL_DATA_TOKEN = ваш_токен` в корневом файле .env. Сам токен можно получить на сайте [https://www.football-data.org/](https://www.football-data.org/)
+
 ## Доступные скрипты
 
 В каталоге проекта вы можете запустить:
